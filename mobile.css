@@ -212,3 +212,34 @@
     font-size: 10px !important;    /* text compact */
   }
 }
+/* ===== SKILLS SIZE RESPONSIVE TO PHONE WIDTH ===== */
+@media (max-width: 768px) {
+
+  body #skills.skills-phone-fix .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  body #skills.skills-phone-fix .skill-card {
+    width: 100% !important;
+
+    /* 🔥 phone width ke hisaab se size */
+    height: 14vw !important;       /* responsive height */
+    max-height: 56px;              /* zyada bada na ho */
+    min-height: 48px;              /* zyada chhota na ho */
+
+    background-color: #000000 !important;
+    border-radius: 8px !important;
+  }
+
+  body #skills.skills-phone-fix .skill-card i {
+    font-size: 4.2vw !important;
+    max-font-size: 18px;
+  }
+
+  body #skills.skills-phone-fix .skill-card span {
+    font-size: 2.6vw !important;
+    max-font-size: 11px;
+    line-height: 1.1;
+  }
+}
