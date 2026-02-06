@@ -179,24 +179,7 @@ nav ul li a:hover::after {
   align-items: center;
 }
 
-.image-ring {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #1b2a6d, transparent 70%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.image-ring img {
-  width: 800px;
-  height: 800px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #0a0d14;
-  box-shadow: 0 0 60px rgba(0,0,0,0.8);
-}
 
 /* ================= SECTIONS ================= */
 section {
@@ -408,16 +391,7 @@ footer {
     font-size: 60px;
   }
 
-  .image-ring {
-    width: 360px;
-    height: 360px;
-  }
 
-  .image-ring img {
-    width: 280px;
-    height: 280px;
-  }
-}
 @media (min-width: 769px) {
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
@@ -503,16 +477,7 @@ footer {
     gap: 22px;
   }
 }
-/* ===== FORCE PHOTO SIZE (FINAL OVERRIDE) ===== */
-.image-ring {
-  width:  350px !important;
-  height: 350px !important;
-}
 
-.image-ring img {
-  width: 250px !important;
-  height:  250px !important;
-}
 /* ===== SKILLS ONE LINE FORCE ===== */
 .skills-grid {
   display: flex !important;
@@ -623,3 +588,55 @@ footer {
   }
 }
 
+/* ===== HERO IMAGE HEIGHT = TEXT BOX HEIGHT ===== */
+
+.hero-container {
+  align-items: stretch;   /* 🔥 left & right same height */
+}
+
+/* right side image wrapper */
+.hero-image {
+  display: flex;
+  align-items: stretch;
+}
+
+
+/* image fills the ring completely */
+.image-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* ===== UNLOCK HERO WIDTH ===== */
+#hero .hero-container {
+  max-width: none !important;   /* 🔥 ye sabse important */
+  width: 100%;
+}
+
+/* ===== STOP FLEX SHRINK (FINAL FIX) ===== */
+
+.hero-image {
+  flex-shrink: 0;   /* 🔥 sabse important line */
+}
+
+/* ===== FINAL HERO IMAGE SIZE CONTROL ===== */
+
+.hero-image {
+  flex-shrink: 0;
+}
+
+.image-ring {
+  width: 420px;        /* 👈 yahin se badhao */
+  height: 420px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+}
+
+.image-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
