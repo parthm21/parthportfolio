@@ -1,0 +1,492 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ================= THEME ================= */
+:root {
+  --text-main: #ffffff;
+  --text-soft: #9ca3af;
+  --accent: #7aa2ff;
+  --border-soft: rgba(255, 255, 255, 0.08);
+}
+
+/* ================= GLOBAL BACKGROUND ================= */
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 10% 10%, #0b1535 0%, transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, #060c24 0%, transparent 55%),
+    linear-gradient(180deg, #02030a 0%, #050816 100%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* ================= NAVBAR ================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(2, 3, 10, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+nav h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.logo-light {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-soft);
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+nav ul li a {
+  color: var(--text-soft);
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--text-main);
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
+#hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(8, 10, 20, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  padding: 45px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+}
+
+.hero-tag {
+  color: var(--text-soft);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  margin: 10px 0;
+  color: var(--text-main);
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: var(--text-soft);
+  max-width: 480px;
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #050816;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 1px solid var(--text-main);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Image */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-ring {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #1b2a6d, transparent 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-ring img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0a0d14;
+  box-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+
+/* ================= SECTIONS ================= */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* ================= SKILLS ================= */
+#skills {
+  text-align: center;
+}
+
+.skills-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 18px;
+}
+
+.skill-card {
+  background: #07090f;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.skill-card i {
+  font-size: 24px;
+  color: #e5e7eb;
+}
+
+.skill-card span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  background: #0a0d14;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* ================= PROJECTS ================= */
+.project-card {
+  background: rgba(8, 10, 20, 0.85);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: #9ca3af;
+  border-top: 1px solid var(--border-soft);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  nav ul {
+    gap: 14px;
+  }
+
+  #hero {
+    padding-top: 40px;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .glass {
+    padding: 30px 22px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .image-ring {
+    width: 300px;
+    height: 300px;
+  }
+
+  .image-ring img {
+    width: 230px;
+    height: 230px;
+  }
+}/* ===== TEXT VISIBILITY IMPROVEMENT ===== */
+
+/* Main text thoda bright */
+body {
+  color: #f1f5f9; /* off-white */
+}
+
+/* Paragraphs */
+p {
+  color: #cbd5e1; /* light grey-blue */
+}
+
+/* Section headings */
+section h2 {
+  color: #ffffff;
+}
+
+/* Navbar links */
+nav ul li a {
+  color: #d1d5db;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* Hero text */
+.hero-text h1 {
+  color: #ffffff;
+}
+
+.hero-text p {
+  color: #dbeafe; /* thoda bluish white */
+}
+
+/* Skills text */
+.skill-card span {
+  color: #e5e7eb;
+}
+
+/* Project text */
+.project-card p {
+  color: #d1d5db;
+}
+
+/* ===== HERO IMAGE HEIGHT MATCH ===== */
+
+.hero-image {
+  align-items: stretch; /* box ki height le */
+}
+
+.image-ring {
+  height: 100%;
+  max-height: 460px;     /* glass box ke barabar look */
+  width: 460px;
+}
+
+.image-ring img {
+  width: 360px;
+  height: 360px;
+}
+/* ===== SKILLS SUBTLE GLOW ON HOVER ===== */
+
+.skill-card {
+  position: relative;
+}
+
+/* Soft glow layer */
+.skill-card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle at top,
+    rgba(80, 120, 255, 0.35),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+
+.skill-card:hover::after {
+  opacity: 1;
+}
+
+/* Icon glow */
+.skill-card:hover i {
+  filter: drop-shadow(0 0 8px rgba(120, 160, 255, 0.6));
+}
+/* ===== PROJECT BUTTONS OVERLAP FIX ===== */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Button container auto spacing */
+.project-card a {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* Buttons ko ek line me rakhna */
+.project-card .btn-primary,
+.project-card .btn-secondary {
+  margin-right: 12px;
+}
+
+/* Mobile pe stack ho jaaye */
+@media (max-width: 768px) {
+  .project-card {
+    align-items: stretch;
+  }
+
+  .project-card .btn-primary,
+  .project-card .btn-secondary {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+/* ===== PROJECT CARD WIDTH FIX ===== */
+
+.project-card {
+  max-width: 850px;          /* pehle zyada wide tha */
+  margin: 0 auto;            /* center me rahe */
+  padding: 24px;             /* thoda compact */
+}
+
+/* ===== PROJECT BUTTONS SMALL & CLEAN ===== */
+
+.project-card .btn-primary,
+.project-card .btn-secondary {
+  padding: 8px 18px;         /* chhote buttons */
+  font-size: 13px;
+  border-radius: 22px;
+}
+
+/* Button spacing */
+.project-card .btn-secondary {
+  margin-right: 10px;
+}
+
+/* Mobile pe full width but slim */
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .project-card .btn-primary,
+  .project-card .btn-secondary {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+/* ===== PROJECT BUTTONS SIDE BY SIDE FIX ===== */
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;        /* ek line me hi rahein */
+}
+
+/* Buttons size small & clean */
+.project-buttons .btn-primary,
+.project-buttons .btn-secondary {
+  padding: 8px 18px;
+  font-size: 13px;
+  border-radius: 22px;
+  white-space: nowrap;
+}
+
+/* Mobile pe bhi side by side */
+@media (max-width: 768px) {
+  .project-buttons {
+    justify-content: center;
+  }
+}
