@@ -195,3 +195,20 @@
       0 0 0 1px rgba(255,255,255,0.12); /* subtle edge highlight */
   }
 }
+/* ===== SKILLS SIZE SMALL TWEAK ===== */
+@media (max-width: 768px) {
+
+  body #skills.skills-phone-fix .skill-card {
+    max-width: 100px !important;   /* pehle ~110–120px */
+    height: 52px !important;       /* pehle ~60px */
+    border-radius: 8px !important;
+  }
+
+  body #skills.skills-phone-fix .skill-card i {
+    font-size: 16px !important;    /* icon thoda chhota */
+  }
+
+  body #skills.skills-phone-fix .skill-card span {
+    font-size: 10px !important;    /* text compact */
+  }
+}
