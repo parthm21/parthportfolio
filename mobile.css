@@ -1,238 +1,109 @@
-/* ================= MOBILE FIRST ================= */
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* NAVBAR */
-header {
-  width: 100%;
-}
-
-nav {
-  width: 100%;
-  padding: 10px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 8px;
-}
-
-nav h2 {
-  font-size: 16px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li a {
-  font-size: 13px;
-}
-
-/* HERO */
-#hero {
-  padding: 32px 0;
-}
-
-.hero-container {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
-}
-
-.glass {
-  width: 100%;
-  padding: 18px 16px;
-}
-
-.hero-text h1 {
-  font-size: 30px;
-}
-
-.hero-text p {
-  font-size: 14px;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-/* IMAGE */
-.image-ring {
-  width: 180px;
-  height: 180px;
-}
-
-.image-ring img {
-  width: 140px;
-  height: 140px;
-}
-
-/* SECTIONS */
-section {
-  padding: 40px 16px;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 24px;
-}
-
-section p {
-  font-size: 14px;
-}
-
-/* SKILLS */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  justify-items: center;
-}
-
-/* PROJECTS */
-.project-card {
-  padding: 18px;
-  margin: 0 auto;
-}
-
-.project-buttons {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-}
-
-.project-buttons a {
-  flex: 1;
-  font-size: 12px;
-  padding: 8px 12px;
-  text-align: center;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-}
-
-.skill-card {
-  width: 100%;
-  max-width: 90px;          /* sab same width */
-  height: 90px;             /* sab same height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  text-align: center;
-}
-/* ===== PHONE PHOTO SIZE (EXACT) ===== */
+/* ================= MOBILE ONLY ================= */
 @media (max-width: 768px) {
 
-  .hero-image {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  nav {
+    width: 100%;
+    padding: 10px 16px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-  }
-
-  .image-ring {
-    width: 365px !important;   /* border / circle */
-    height: 365px !important;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .image-ring img {
-    width: 250px !important;   /* actual image */
-    height: 250px !important;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-}
-
-/* ===== NAVBAR & HERO GAP REDUCE (MOBILE) ===== */
-header {
-  margin-bottom: 6px;   /* navbar ke niche gap kam */
-}
-
-#hero {
-  padding-top: 16px;    /* pehle zyada tha */
-}
-
-.hero-container {
-  gap: 14px;            /* image + intro ke beech kam gap */
-}
-/* ===== PHOTO & CARD DISTANCE ===== */
-.hero-image {
-  margin-bottom: 4px;
-}
-
-.glass {
-  margin-top: 0;
-}
-/* ===== PHONE SKILLS CLEAN ALIGNMENT ===== */
-@media (max-width: 768px) {
-
-  /* skills section thoda breathing space */
-  #skills {
-    padding-top: 30px;
-    padding-bottom: 20px;
-  }
-
-  .skills-grid {
-    display: flex !important;
-    align-items: center !important;
-
-    /* 🔥 center se start ho, chipka hua nahi */
-    justify-content: center !important;
-
-    gap: 14px !important;
-    flex-wrap: nowrap !important;
-
-    overflow-x: auto !important;
-    padding: 10px 16px 14px !important; /* left-right padding */
-    scroll-snap-type: x mandatory;      /* smooth swipe feel */
-  }
-
-  .skill-card {
-    min-width: 120px !important;
-    height: 78px !important;
-    flex-shrink: 0 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    gap: 6px !important;
-    border-radius: 14px;
-
-    scroll-snap-align: center;           /* card center me rukega */
-  }
-
-  .skill-card i {
-    font-size: 22px !important;
-  }
-
-  .skill-card span {
-    font-size: 12px !important;
+    gap: 8px;
     text-align: center;
   }
 
-  /* scrollbar hide (clean look) */
-  .skills-grid::-webkit-scrollbar {
-    display: none;
+  nav h2 {
+    font-size: 16px;
   }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+  }
+
+  /* HERO */
+  #hero {
+    padding: 16px 0;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    gap: 14px;
+    text-align: center;
+  }
+
+  /* IMAGE */
+  .image-ring {
+    width: 365px;
+    height: 365px;
+  }
+
+  .image-ring img {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 40px 16px;
+    text-align: center;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+
+  /* ===== SKILLS FINAL (WORKING) ===== */
+  #skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 + 3 */
+    gap: 14px;
+    justify-items: center;
+  }
+
+  #skills .skill-card {
+    width: 100%;
+    max-width: 120px;
+    height: 78px;
+
+    background: #ffffff;
+    color: #050816;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  #skills .skill-card i {
+    font-size: 20px;
+    color: #050816;
+  }
+
+  #skills .skill-card span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #050816;
+  }
+
 }
