@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 /* ================= RESET ================= */
 * {
   margin: 0;

@@ -1,3 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
 /* ================= MOBILE CSS (FINAL CLEAN) ================= */
 @media (max-width: 768px) {
 
