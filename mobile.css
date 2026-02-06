@@ -148,3 +148,21 @@
     text-align: center !important;
   }
 }
+/* ===== SKILLS HOVER / TAP EFFECT (SAFE) ===== */
+@media (max-width: 768px) {
+
+  body #skills.skills-phone-fix .skill-card {
+    transition: 
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background-color 0.25s ease;
+  }
+
+  /* Hover / Tap effect */
+  body #skills.skills-phone-fix .skill-card:hover,
+  body #skills.skills-phone-fix .skill-card:active {
+    transform: translateY(-4px); /* halka sa lift */
+    box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+    background-color: #f9fafb;  /* white hi rahe, bas soft */
+  }
+}
