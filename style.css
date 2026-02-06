@@ -180,8 +180,8 @@ nav ul li a:hover::after {
 }
 
 .image-ring {
-  width: 380px;
-  height: 380px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   background: radial-gradient(circle, #1b2a6d, transparent 70%);
   display: flex;
@@ -190,8 +190,8 @@ nav ul li a:hover::after {
 }
 
 .image-ring img {
-  width: 300px;
-  height: 300px;
+  width: 800px;
+  height: 800px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #0a0d14;
@@ -269,105 +269,6 @@ footer {
   border-top: 1px solid var(--border-soft);
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-  nav ul {
-    gap: 14px;
-  }
-
-  #hero {
-    padding-top: 40px;
-  }
-
-  .hero-container {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .glass {
-    padding: 30px 22px;
-  }
-
-  .hero-text h1 {
-    font-size: 40px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .image-ring {
-    width: 300px;
-    height: 300px;
-  }
-
-  .image-ring img {
-    width: 230px;
-    height: 230px;
-  }
-}/* ===== TEXT VISIBILITY IMPROVEMENT ===== */
-
-/* Main text thoda bright */
-body {
-  color: #f1f5f9; /* off-white */
-}
-
-/* Paragraphs */
-p {
-  color: #cbd5e1; /* light grey-blue */
-}
-
-/* Section headings */
-section h2 {
-  color: #ffffff;
-}
-
-/* Navbar links */
-nav ul li a {
-  color: #d1d5db;
-}
-
-nav ul li a:hover {
-  color: #ffffff;
-}
-
-/* Hero text */
-.hero-text h1 {
-  color: #ffffff;
-}
-
-.hero-text p {
-  color: #dbeafe; /* thoda bluish white */
-}
-
-/* Skills text */
-.skill-card span {
-  color: #e5e7eb;
-}
-
-/* Project text */
-.project-card p {
-  color: #d1d5db;
-}
-
-/* ===== HERO IMAGE HEIGHT MATCH ===== */
-
-.hero-image {
-  align-items: stretch; /* box ki height le */
-}
-
-.image-ring {
-  height: 100%;
-  max-height: 460px;     /* glass box ke barabar look */
-  width: 460px;
-}
-
-.image-ring img {
-  width: 360px;
-  height: 360px;
-}
 /* ===== SKILLS SUBTLE GLOW ON HOVER ===== */
 
 .skill-card {
@@ -517,3 +418,208 @@ nav ul li a:hover {
     height: 280px;
   }
 }
+@media (min-width: 769px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+
+  .skill-card {
+    max-width: 110px;
+    height: 100px;
+  }
+}
+/* ===== DESKTOP: SKILLS IN ONE LINE ===== */
+@media (min-width: 1024px) {
+
+  .skills-grid {
+    display: flex;              /* grid se flex */
+    justify-content: center;    /* center me */
+    align-items: center;
+    gap: 18px;
+    flex-wrap: nowrap;          /* 🔥 ek hi line */
+    overflow-x: auto;           /* agar screen chhoti ho */
+    padding-bottom: 10px;
+  }
+
+  .skill-card {
+    min-width: 110px;           /* sab equal width */
+    height: 100px;
+    flex-shrink: 0;             /* wrap hone se bachaaye */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .skill-card i {
+    font-size: 24px;
+  }
+
+  .skill-card span {
+    font-size: 13px;
+  }
+}
+
+/* ===== DESKTOP SKILLS TIGHT LINE ===== */
+@media (min-width: 1024px) {
+
+  .skills-grid {
+    gap: 12px;              /* pehle zyada gap tha */
+  }
+
+  .skill-card {
+    min-width: 95px;        /* thodi compact */
+    height: 90px;
+  }
+
+  .skill-card i {
+    font-size: 22px;
+  }
+
+  .skill-card span {
+    font-size: 12px;
+  }
+}
+/* ===== DESKTOP NAVBAR ALIGNMENT ===== */
+@media (min-width: 769px) {
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 🔥 key line */
+  }
+
+  nav h2 {
+    margin: 0;
+    text-align: left;
+  }
+
+  nav ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 22px;
+  }
+}
+/* ===== FORCE PHOTO SIZE (FINAL OVERRIDE) ===== */
+.image-ring {
+  width:  350px !important;
+  height: 350px !important;
+}
+
+.image-ring img {
+  width: 250px !important;
+  height:  250px !important;
+}
+/* ===== SKILLS ONE LINE FORCE ===== */
+.skills-grid {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: nowrap !important;   /* 🔥 sab ek line */
+  overflow-x: auto;               /* screen chhoti ho to scroll */
+}
+
+/* Skill cards fixed size */
+.skill-card {
+  min-width: 90px !important;
+  height: 90px !important;
+  flex-shrink: 0 !important;      /* wrap hone se roke */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+}
+
+/* Icon + text sizing */
+.skill-card i {
+  font-size: 22px !important;
+}
+
+.skill-card span {
+  font-size: 12px !important;
+}
+
+/* ===== SKILLS RECTANGLE ONE LINE ===== */
+.skills-grid {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: nowrap !important;     /* sab ek line */
+  overflow-x: auto !important;      /* zyada ho to scroll */
+}
+
+/* RECTANGLE SKILL CARD */
+.skill-card {
+  min-width: 120px !important;      /* 🔥 rectangle width */
+  height: 80px !important;          /* 🔥 rectangle height */
+  padding: 0 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+
+  border-radius: 14px;              /* smooth rectangle */
+}
+
+/* Icon & text balance */
+.skill-card i {
+  font-size: 22px !important;
+  line-height: 1 !important;
+}
+
+.skill-card span {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  text-align: center;
+}
+/* ===== NAVBAR CORNER TO CORNER (DESKTOP) ===== */
+@media (min-width: 769px) {
+
+  header {
+    width: 100%;
+  }
+
+  header nav {
+    width: 100% !important;          /* full width */
+    max-width: 100% !important;      /* 1100px limit hatao */
+    padding: 14px 32px !important;   /* left-right breathing space */
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* LEFT CORNER */
+  header nav h2 {
+    margin: 0 !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+  }
+
+  /* RIGHT CORNER */
+  header nav ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 22px !important;
+    white-space: nowrap !important;
+  }
+
+  header nav ul li {
+    white-space: nowrap !important;
+  }
+}
+

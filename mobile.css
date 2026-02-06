@@ -125,3 +125,60 @@ footer {
   text-align: center;
 }
 
+.skill-card {
+  width: 100%;
+  max-width: 90px;          /* sab same width */
+  height: 90px;             /* sab same height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+}
+/* ===== PHONE PHOTO SIZE (EXACT) ===== */
+@media (max-width: 768px) {
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-ring {
+    width: 365px !important;   /* border / circle */
+    height: 365px !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-ring img {
+    width: 250px !important;   /* actual image */
+    height: 250px !important;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+/* ===== NAVBAR & HERO GAP REDUCE (MOBILE) ===== */
+header {
+  margin-bottom: 6px;   /* navbar ke niche gap kam */
+}
+
+#hero {
+  padding-top: 16px;    /* pehle zyada tha */
+}
+
+.hero-container {
+  gap: 14px;            /* image + intro ke beech kam gap */
+}
+/* ===== PHOTO & CARD DISTANCE ===== */
+.hero-image {
+  margin-bottom: 4px;
+}
+
+.glass {
+  margin-top: 0;
+}
