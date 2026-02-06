@@ -182,3 +182,57 @@ header {
 .glass {
   margin-top: 0;
 }
+/* ===== PHONE SKILLS CLEAN ALIGNMENT ===== */
+@media (max-width: 768px) {
+
+  /* skills section thoda breathing space */
+  #skills {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .skills-grid {
+    display: flex !important;
+    align-items: center !important;
+
+    /* 🔥 center se start ho, chipka hua nahi */
+    justify-content: center !important;
+
+    gap: 14px !important;
+    flex-wrap: nowrap !important;
+
+    overflow-x: auto !important;
+    padding: 10px 16px 14px !important; /* left-right padding */
+    scroll-snap-type: x mandatory;      /* smooth swipe feel */
+  }
+
+  .skill-card {
+    min-width: 120px !important;
+    height: 78px !important;
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 6px !important;
+    border-radius: 14px;
+
+    scroll-snap-align: center;           /* card center me rukega */
+  }
+
+  .skill-card i {
+    font-size: 22px !important;
+  }
+
+  .skill-card span {
+    font-size: 12px !important;
+    text-align: center;
+  }
+
+  /* scrollbar hide (clean look) */
+  .skills-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
