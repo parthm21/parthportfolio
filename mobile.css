@@ -166,33 +166,32 @@
     background-color: #f9fafb;  /* white hi rahe, bas soft */
   }
 }
-/* ===== DARK THEME SKILLS HOVER (NO SIZE CHANGE) ===== */
+/* ===== PURE BLACK SKILLS (DARK THEME) ===== */
 @media (max-width: 768px) {
 
   body #skills.skills-phone-fix .skill-card {
-    background-color: #0b0f1a !important; /* dark base */
-    color: #e5e7eb !important;
-    border: 1px solid rgba(255,255,255,0.06);
+    background-color: #000000 !important;   /* 🔥 pure black */
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.08);
+
     transition:
       transform 0.25s ease,
       box-shadow 0.25s ease,
-      background-color 0.25s ease,
       border-color 0.25s ease;
   }
 
   body #skills.skills-phone-fix .skill-card i,
   body #skills.skills-phone-fix .skill-card span {
-    color: #e5e7eb !important;
+    color: #ffffff !important;
   }
 
-  /* Hover / Tap */
+  /* Hover / Tap effect */
   body #skills.skills-phone-fix .skill-card:hover,
   body #skills.skills-phone-fix .skill-card:active {
-    background-color: #11162a !important; /* 🔥 darker hover */
-    border-color: rgba(120,160,255,0.35);
-    transform: translateY(-4px);
+    transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.25);
     box-shadow:
-      0 10px 28px rgba(0,0,0,0.6),
-      0 0 14px rgba(120,160,255,0.35); /* soft blue glow */
+      0 10px 25px rgba(0,0,0,0.8),
+      0 0 0 1px rgba(255,255,255,0.12); /* subtle edge highlight */
   }
 }
