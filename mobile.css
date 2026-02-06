@@ -1,7 +1,7 @@
-
-/* ================= MOBILE ONLY ================= */
+/* ================= MOBILE CSS (FINAL CLEAN) ================= */
 @media (max-width: 768px) {
 
+  /* GLOBAL */
   html, body {
     width: 100%;
     overflow-x: hidden;
@@ -36,24 +36,58 @@
 
   /* HERO */
   #hero {
-    padding: 16px 0;
+    padding: 20px 0;
   }
 
   .hero-container {
+    display: flex;
     flex-direction: column-reverse;
-    gap: 14px;
+    align-items: center;
+    gap: 16px;
     text-align: center;
   }
 
-  /* IMAGE */
+  .glass {
+    width: 100%;
+    padding: 20px 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* ===== HERO IMAGE (PERFECT CIRCLE FIX) ===== */
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .image-ring {
-    width: 365px;
-    height: 365px;
+    width: 340px;          /* 👈 yahin se size control */
+    height: 340px;
+    border-radius: 50%;
+    overflow: hidden;     /* 🔥 MUST */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .image-ring img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
   }
 
   /* SECTIONS */
@@ -70,228 +104,61 @@
     font-size: 14px;
   }
 
-  /* ===== SKILLS FINAL (WORKING) ===== */
+  /* ===== SKILLS (2–2 / 3–3 GRID) ===== */
   #skills .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 + 3 */
-    gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
     justify-items: center;
   }
 
   #skills .skill-card {
     width: 100%;
-    max-width: 120px;
-    height: 78px;
-
-    background: #ffffff;
-    color: #050816;
+    height: 52px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    gap: 4px;
   }
 
   #skills .skill-card i {
-    font-size: 20px;
-    color: #050816;
+    font-size: 16px;
+    color: #ffffff;
   }
 
   #skills .skill-card span {
-    font-size: 12px;
-    font-weight: 600;
-    color: #050816;
+    font-size: 10px;
+    color: #ffffff;
+    line-height: 1;
   }
 
-}
-/* ===== FINAL FORCE SKILLS FIX (PHONE) ===== */
-@media (max-width: 768px) {
-
-  body #skills.skills-phone-fix .skills-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 14px !important;
-    justify-items: center !important;
+  /* PROJECTS */
+  .project-card {
+    padding: 20px;
   }
 
-  body #skills.skills-phone-fix .skill-card {
-    width: 100% !important;
-    max-width: 120px !important;
-    height: 80px !important;
-
-    background: #ffffff !important;
-    color: #050816 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 6px !important;
-
-    border-radius: 12px !important;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15) !important;
-  }
-
-  body #skills.skills-phone-fix .skill-card i {
-    font-size: 20px !important;
-    color: #050816 !important;
-  }
-
-  body #skills.skills-phone-fix .skill-card span {
-    font-size: 12px !important;
-    font-weight: 600 !important;
-    color: #050816 !important;
-    text-align: center !important;
-  }
-}
-/* ===== SKILLS HOVER / TAP EFFECT (SAFE) ===== */
-@media (max-width: 768px) {
-
-  body #skills.skills-phone-fix .skill-card {
-    transition: 
-      transform 0.25s ease,
-      box-shadow 0.25s ease,
-      background-color 0.25s ease;
-  }
-
-  /* Hover / Tap effect */
-  body #skills.skills-phone-fix .skill-card:hover,
-  body #skills.skills-phone-fix .skill-card:active {
-    transform: translateY(-4px); /* halka sa lift */
-    box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-    background-color: #f9fafb;  /* white hi rahe, bas soft */
-  }
-}
-/* ===== PURE BLACK SKILLS (DARK THEME) ===== */
-@media (max-width: 768px) {
-
-  body #skills.skills-phone-fix .skill-card {
-    background-color: #000000 !important;   /* 🔥 pure black */
-    color: #ffffff !important;
-    border: 1px solid rgba(255,255,255,0.08);
-
-    transition:
-      transform 0.25s ease,
-      box-shadow 0.25s ease,
-      border-color 0.25s ease;
-  }
-
-  body #skills.skills-phone-fix .skill-card i,
-  body #skills.skills-phone-fix .skill-card span {
-    color: #ffffff !important;
-  }
-
-  /* Hover / Tap effect */
-  body #skills.skills-phone-fix .skill-card:hover,
-  body #skills.skills-phone-fix .skill-card:active {
-    transform: translateY(-3px);
-    border-color: rgba(255,255,255,0.25);
-    box-shadow:
-      0 10px 25px rgba(0,0,0,0.8),
-      0 0 0 1px rgba(255,255,255,0.12); /* subtle edge highlight */
-  }
-}
-/* ===== SKILLS SIZE SMALL TWEAK ===== */
-@media (max-width: 768px) {
-
-  body #skills.skills-phone-fix .skill-card {
-    max-width: 100px !important;   /* pehle ~110–120px */
-    height: 52px !important;       /* pehle ~60px */
-    border-radius: 8px !important;
-  }
-
-  body #skills.skills-phone-fix .skill-card i {
-    font-size: 16px !important;    /* icon thoda chhota */
-  }
-
-  body #skills.skills-phone-fix .skill-card span {
-    font-size: 10px !important;    /* text compact */
-  }
-}
-/* ===== SKILLS SIZE RESPONSIVE TO PHONE WIDTH ===== */
-@media (max-width: 768px) {
-
-  body #skills.skills-phone-fix .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .project-buttons {
+    display: flex;
     gap: 10px;
+    justify-content: center;
   }
 
-  body #skills.skills-phone-fix .skill-card {
-    width: 100% !important;
-
-    /* 🔥 phone width ke hisaab se size */
-    height: 14vw !important;       /* responsive height */
-    max-height: 56px;              /* zyada bada na ho */
-    min-height: 48px;              /* zyada chhota na ho */
-
-    background-color: #000000 !important;
-    border-radius: 8px !important;
+  .project-buttons a {
+    flex: 1;
+    font-size: 12px;
+    padding: 8px;
+    text-align: center;
   }
 
-  body #skills.skills-phone-fix .skill-card i {
-    font-size: 4.2vw !important;
-    max-font-size: 18px;
-  }
-
-  body #skills.skills-phone-fix .skill-card span {
-    font-size: 2.6vw !important;
-    max-font-size: 11px;
-    line-height: 1.1;
-  }
-}
-/* ===== FINAL HORIZONTAL SCROLL KILL ===== */
-@media (max-width: 768px) {
-
-  html, body {
-    width: 100%;
-    overflow-x: hidden !important;   /* 🔥 main fix */
-  }
-
-  /* sab containers ko safe width */
-  section,
-  header,
-  nav,
-  .hero-container,
-  .skills-grid {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* skills cards kabhi bahar na nikle */
-  body #skills.skills-phone-fix .skill-card {
-    box-sizing: border-box;
-  }
-}
-/* ===== MOBILE IMAGE FORCE CIRCLE FIX ===== */
-
-@media (max-width: 768px) {
-
-  /* hero image wrapper */
-  #hero .hero-image {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  /* circle container */
-  #hero .image-ring {
-    width: 320px !important;
-    height: 320px !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;   /* 🔥 sabse important */
-    display: block !important;
-  }
-
-  /* image itself */
-  #hero .image-ring img {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    display: block !important;
+  /* FOOTER */
+  footer {
+    font-size: 12px;
+    text-align: center;
   }
 }

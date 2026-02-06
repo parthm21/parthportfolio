@@ -14,6 +14,7 @@
 
   <!-- CSS Link (baad me style.css banayenge) -->
  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mobile.css">
 
 </head>
 <body>
@@ -54,10 +55,24 @@
 
     <!-- RIGHT -->
     <div class="hero-image">
-      <div class="image-ring">
-        <img src="/profile.jpg.jpeg" alt="Parth">
-      </div>
-    </div>
+  <div class="image-ring"
+       style="
+         width:320px;
+         height:320px;
+         border-radius:50%;
+         overflow:hidden;
+       ">
+    <img src="profile.jpg.jpeg"
+         alt="Parth"
+         style="
+           width:100%;
+           height:100%;
+           object-fit:cover;
+           border-radius:50%;
+           display:block;
+         ">
+  </div>
+</div>
 
   </div>
 </section>
