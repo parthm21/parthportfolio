@@ -1,11 +1,4 @@
 
-body {
-  background: lime !important;
-}
-
-
-
-
 /* ================= MOBILE ONLY ================= */
 @media (max-width: 768px) {
 
@@ -114,4 +107,44 @@ body {
     color: #050816;
   }
 
+}
+/* ===== FINAL FORCE SKILLS FIX (PHONE) ===== */
+@media (max-width: 768px) {
+
+  body #skills.skills-phone-fix .skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+    justify-items: center !important;
+  }
+
+  body #skills.skills-phone-fix .skill-card {
+    width: 100% !important;
+    max-width: 120px !important;
+    height: 80px !important;
+
+    background: #ffffff !important;
+    color: #050816 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+
+    border-radius: 12px !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15) !important;
+  }
+
+  body #skills.skills-phone-fix .skill-card i {
+    font-size: 20px !important;
+    color: #050816 !important;
+  }
+
+  body #skills.skills-phone-fix .skill-card span {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #050816 !important;
+    text-align: center !important;
+  }
 }
