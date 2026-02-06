@@ -243,3 +243,26 @@
     line-height: 1.1;
   }
 }
+/* ===== FINAL HORIZONTAL SCROLL KILL ===== */
+@media (max-width: 768px) {
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;   /* 🔥 main fix */
+  }
+
+  /* sab containers ko safe width */
+  section,
+  header,
+  nav,
+  .hero-container,
+  .skills-grid {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* skills cards kabhi bahar na nikle */
+  body #skills.skills-phone-fix .skill-card {
+    box-sizing: border-box;
+  }
+}
