@@ -266,3 +266,32 @@
     box-sizing: border-box;
   }
 }
+/* ===== MOBILE IMAGE FORCE CIRCLE FIX ===== */
+
+@media (max-width: 768px) {
+
+  /* hero image wrapper */
+  #hero .hero-image {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* circle container */
+  #hero .image-ring {
+    width: 320px !important;
+    height: 320px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;   /* 🔥 sabse important */
+    display: block !important;
+  }
+
+  /* image itself */
+  #hero .image-ring img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+}
