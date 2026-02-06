@@ -1,0 +1,127 @@
+/* ================= MOBILE FIRST ================= */
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+header {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+nav h2 {
+  font-size: 16px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  font-size: 13px;
+}
+
+/* HERO */
+#hero {
+  padding: 32px 0;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.glass {
+  width: 100%;
+  padding: 18px 16px;
+}
+
+.hero-text h1 {
+  font-size: 30px;
+}
+
+.hero-text p {
+  font-size: 14px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* IMAGE */
+.image-ring {
+  width: 180px;
+  height: 180px;
+}
+
+.image-ring img {
+  width: 140px;
+  height: 140px;
+}
+
+/* SECTIONS */
+section {
+  padding: 40px 16px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 24px;
+}
+
+section p {
+  font-size: 14px;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  justify-items: center;
+}
+
+/* PROJECTS */
+.project-card {
+  padding: 18px;
+  margin: 0 auto;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.project-buttons a {
+  flex: 1;
+  font-size: 12px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+}
+

@@ -490,3 +490,30 @@ nav ul li a:hover {
     justify-content: center;
   }
 }
+/* ================= DESKTOP ONLY ================= */
+@media (min-width: 769px) {
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero-container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 60px;
+  }
+
+  .image-ring {
+    width: 360px;
+    height: 360px;
+  }
+
+  .image-ring img {
+    width: 280px;
+    height: 280px;
+  }
+}
